@@ -1,0 +1,336 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohamed Abd Elmwoli | Backend Developer</title>
+  <meta name="description" content="Portfolio of Mohamed Abd Elmwoli, a Backend Developer and Computer Science student specializing in Python, Django, Django REST Framework, REST APIs, and backend development.">
+  <meta name="theme-color" content="#14110f">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Abd Elmwoli | Backend Developer">
+  <meta property="og:description" content="Backend Developer and Computer Science student specializing in Python, Django, and REST APIs.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2314110f'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23e8890c'%3EM%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Mohamed<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-social">
+        <a href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="mono kicker">Computer Science student · Egypt</p>
+          <h1>Hi, I'm <em>Mohamed Abd Elmwoli</em></h1>
+          <p class="subtitle">Backend Developer</p>
+          <p class="lead">I build backend systems, RESTful APIs, and practical web applications using Python and Django.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View My Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+            <a class="btn" href="{% url 'cv' %}">Download CV</a>
+          </div>
+          <div class="hero-social">
+            <a href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+            <a href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+
+        <aside class="glance reveal" aria-label="At a glance">
+          <p class="mono glance-title">at a glance</p>
+          <dl>
+            <div><dt>role</dt><dd>Backend Developer</dd></div>
+            <div><dt>stack</dt><dd>Python · Django · Django REST Framework</dd></div>
+            <div><dt>leading</dt><dd>Backend Team, IEEE</dd></div>
+            <div><dt>studying</dt><dd>Computer Science, Obour Institutes (2023 – 2027)</dd></div>
+            <div><dt>training</dt><dd>Software Testing, DEPI <span class="status">in progress</span></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">01</span><h2>About Me</h2></div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Mohamed Abd Elmwoli is a Computer Science student at Obour Institutes with a strong interest in backend development.</p>
+            <p>He started learning programming with C++, studying Object-Oriented Programming, Data Structures, and Algorithms. He then moved into Python and backend web development with Django and Django REST Framework, building multiple web applications and REST APIs.</p>
+            <p>He has hands-on experience with databases, authentication, APIs, Git/GitHub, Docker, and Postman. He is currently taking part in the Digital Egypt Pioneers Initiative (DEPI), specializing in Software Testing, to broaden his understanding of software quality alongside his backend path.</p>
+            <p>He is also a Backend Team Leader at IEEE.</p>
+          </div>
+          <ul class="facts reveal">
+            <li><span class="mono">role</span>Backend Developer</li>
+            <li><span class="mono">leadership</span>Backend Team Leader, IEEE</li>
+            <li><span class="mono">education</span>Computer Science, Obour Institutes</li>
+            <li><span class="mono">location</span>Egypt</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">02</span><h2>Technical Skills</h2></div>
+        <div class="skills-grid">
+          {% for category in skill_categories %}
+          <div class="card skill-cat reveal">
+            <h3 class="mono">{{ category.name }}</h3>
+            <ul class="chips">
+              {% for skill in category.skills.all %}<li>{{ skill.name }}</li>{% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">03</span><h2>Featured Projects</h2></div>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="backend" aria-pressed="false">Backend</button>
+          <button class="filter" data-filter="django" aria-pressed="false">Django</button>
+          <button class="filter" data-filter="rest" aria-pressed="false">REST API</button>
+          <button class="filter" data-filter="management" aria-pressed="false">Management Systems</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          {% for p in projects %}
+          <article class="card project{% if p.is_featured %} featured{% endif %}" data-cat="{{ p.categories }}">
+            <p class="mono tag">{% if p.is_featured %}Featured · {% endif %}{{ p.kind }}</p>
+            <h3>{{ p.title }}</h3>
+            <p class="desc">{{ p.description }}</p>
+            {% if p.feature_list %}
+            <ul class="feat">
+              {% for f in p.feature_list %}<li>{{ f }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+            {% if p.note %}<p class="note">{{ p.note }}</p>{% endif %}
+            <ul class="chips small stack">
+              {% for t in p.tech_list %}<li>{{ t }}</li>{% endfor %}
+            </ul>
+            <div class="proj-actions">
+              {% if p.github_url %}<a class="btn small{% if p.is_featured %} primary{% endif %}" href="{{ p.github_url }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+              {% if p.demo_url %}
+                <a class="btn small" href="{{ p.demo_url }}" target="_blank" rel="noopener">Live Demo</a>
+              {% elif p.is_featured %}
+                <span class="soon mono">Demo: coming soon</span>
+              {% endif %}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">04</span><h2>Experience &amp; Leadership</h2></div>
+
+        <div class="card leader reveal">
+          <div class="leader-head">
+            <div>
+              <h3>Backend Team Leader</h3>
+              <p class="org">IEEE</p>
+            </div>
+            <span class="badge mono">current role</span>
+          </div>
+          <ul class="leader-list">
+            <li>Backend team leadership</li>
+            <li>Technical collaboration</li>
+            <li>Supporting team members</li>
+            <li>Organizing backend-related work</li>
+            <li>Guiding development tasks</li>
+          </ul>
+        </div>
+
+        <div class="card learning reveal">
+          <div class="leader-head">
+            <div>
+              <p class="mono tag">Continuous learning</p>
+              <h3>Software Testing — DEPI</h3>
+              <p class="org">Digital Egypt Pioneers Initiative</p>
+            </div>
+            <span class="badge progress mono">in progress</span>
+          </div>
+          <p>Currently participating in the Digital Egypt Pioneers Initiative (DEPI), specializing in Software Testing to strengthen software quality, testing, and development practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">05</span><h2>Certifications</h2></div>
+        <div class="certs-grid">
+          {% for c in certifications %}
+          <button class="card cert reveal" type="button"
+                  data-title="{{ c.title }} — {{ c.platform }}"
+                  data-img="{% if c.image %}{{ c.image.url }}{% endif %}">
+            <div class="cert-preview">
+              {% if c.image %}
+              <img src="{{ c.image.url }}" alt="{{ c.title }} certificate from {{ c.platform }}" loading="lazy" width="640" height="400">
+              {% else %}
+              <span class="mono">preview not added yet</span>
+              {% endif %}
+            </div>
+            <h3>{{ c.title }}</h3>
+            <p>Platform: {{ c.platform }}</p>
+            <p>{{ c.kind }}</p>
+            {% if c.issued_on or c.number %}<p class="mono meta">{{ c.issued_on }}{% if c.issued_on and c.number %} · {% endif %}{% if c.number %}No. {{ c.number }}{% endif %}</p>{% endif %}
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">06</span><h2>Education</h2></div>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="card">
+              <p class="mono tl-date">2023 – 2027</p>
+              <h3>Computer Science</h3>
+              <p class="org">Obour Institutes</p>
+              <ul class="chips small">
+                <li>Programming</li><li>Object-Oriented Programming</li><li>Data Structures</li>
+                <li>Algorithms</li><li>Web Development</li><li>Backend Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal"><span class="mono num">07</span><h2>Let's Build Something Together</h2></div>
+        <p class="lead reveal contact-lead">Have a project, opportunity, or collaboration in mind? Feel free to reach out.</p>
+
+        <div class="contact-grid">
+          <div class="card contact-info reveal">
+            <ul>
+              <li><span class="mono">email</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              <li><span class="mono">phone</span><a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a></li>
+              <li><span class="mono">whatsapp</span><a href="{{ site.whatsapp }}" target="_blank" rel="noopener">{{ site.phone }}</a></li>
+              <li><span class="mono">github</span><a href="{{ site.github }}" target="_blank" rel="noopener">github.com/Almwola</a></li>
+              <li><span class="mono">linkedin</span><a href="{{ site.linkedin }}" target="_blank" rel="noopener">Mohamed Abd Elmwola</a></li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn primary small" href="mailto:{{ site.email }}">Email Me</a>
+              <a class="btn small" href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn small" href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn small" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn small" href="{% url 'cv' %}">Download CV</a>
+            </div>
+          </div>
+
+          <form class="card form reveal" method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <label>Name<input type="text" name="name" required maxlength="120" autocomplete="name"></label>
+            <label>Email<input type="email" name="email" required autocomplete="email"></label>
+            <label>Subject<input type="text" name="subject" required maxlength="200"></label>
+            <label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
+            <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn primary" type="submit">Send Message</button>
+            {% if messages %}
+            <div role="status" aria-live="polite">
+              {% for message in messages %}<p class="form-status {{ message.tags }}">{{ message }}</p>{% endfor %}
+            </div>
+            {% endif %}
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container reveal">
+        <h2>Ready to build something great?</h2>
+        <div class="cta-row center">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+        <div class="cta-row center links">
+          <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+          <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:{{ site.email }}">Email</a>
+          <a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><strong>Mohamed Abd Elmwoli</strong><p>Backend Developer</p></div>
+      <div>
+        <h4 class="mono">quick links</h4>
+        <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4 class="mono">social</h4>
+        <ul><li><a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a></li><li><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a></li></ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Mohamed Abd Elmwoli. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certTitle" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <h3 id="certTitle"></h3>
+      <img id="certImg" alt="" hidden>
+      <p class="modal-missing" id="certMissing" hidden>The certificate image has not been added yet. Upload it from the admin panel.</p>
+    </div>
+  </div>
+
+  <script src="{% static 'portfolio/js/main.js' %}" defer></script>
+</body>
+</html>
